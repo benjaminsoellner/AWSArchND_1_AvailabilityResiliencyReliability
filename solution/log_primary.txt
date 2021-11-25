@@ -1,0 +1,19 @@
+ubuntu@ip-10-1-11-53:~$ mysql -h database-1.cqfmbocecumm.us-east-1.rds.amazonaws.com -u admin -p
+...
+mysql> CREATE TABLE Persons (
+    -> id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    -> firstname VARCHAR(30) NOT NULL,
+    -> lastname VARCHAR(30) NOT NULL
+    -> );
+Query OK, 0 rows affected, 1 warning (0.06 sec)
+
+mysql> INSERT INTO Persons (firstname, lastname) VALUES ("Benjamin", "Soellner");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM Persons;
++----+-----------+----------+
+| id | firstname | lastname |
++----+-----------+----------+
+|  1 | Benjamin  | Soellner |
++----+-----------+----------+
+1 row in set (0.00 sec)

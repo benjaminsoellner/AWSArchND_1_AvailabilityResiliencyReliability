@@ -1,0 +1,3 @@
+The database probably will have a minimum RTO and RPO of just a few microseconds within one AZ as reads and writes can happen synchronously across availability zones - after all, they are still quite close together in the same region.
+
+Should a region fail, however, then the RTO and RPO would be a few seconds until minutes. We saw during the database replication and promotion that those processes took a few minutes to complete.

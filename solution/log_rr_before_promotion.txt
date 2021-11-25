@@ -1,0 +1,13 @@
+ubuntu@ip-10-2-11-84:~$ mysql -h database-2.ck7sda60d0xc.eu-central-1.rds.amazonaws.com -u admin -p
+...
+mysql> SELECT * FROM Persons;
++----+-----------+----------+
+| id | firstname | lastname |
++----+-----------+----------+
+|  1 | Benjamin  | Soellner |
++----+-----------+----------+
+1 row in set (0.00 sec)
+
+mysql> INSERT INTO Persons (firstname, lastname) VALUES ("Percy", "McPersonface");
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+mysql> 
